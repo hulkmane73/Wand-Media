@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wand Media</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#d8e5da;
+    color:#1b5e3c;
+}
+
+/ NAV /
+header {
+    display:flex;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:white;
+    position:sticky;
+    top:0;
+}
+
+.logo {height:50px;}
+
+nav a {
+    margin:0 10px;
+    text-decoration:none;
+    color:#1b5e3c;
+    font-weight:600;
+}
+
+/ HERO /
+.hero {
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1b5e3c,#5eab70);
+    color:white;
+    text-align:center;
+}
+
+.hero h1 {font-size:50px;}
+
+.btn {
+    background:#e3b04c;
+    padding:12px 25px;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+/ SECTION /
+.section {padding:70px 20px;text-align:center;}
+
+/ PACKAGES /
+.packages {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.package {
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    position:relative;
+}
+
+.popular {
+    border:3px solid #af0b27;
+}
+
+.badge {
+    position:absolute;
+    top:-10px;
+    right:10px;
+    background:#af0b27;
+    color:white;
+    padding:5px 10px;
+    font-size:12px;
+}
+
+.package button {
+    background:#e3b04c;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+/ TESTIMONIALS /
+.testimonials {
+    background:white;
+    padding:40px;
+}
+
+.testimonial {
+    margin:15px 0;
+}
+
+/ CONTACT /
+.contact {
+    background:#1b5e3c;
+    color:white;
+    padding:60px 20px;
+}
+
+/ WHATSAPP /
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    color:white;
+}
+
+/ FOOTER /
+footer {
+    background:black;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="images/Wand-Media-2025-REBRAND-BG-LOGO.png" class="logo">
+<nav>
+<a href="#home">Home</a>
+<a href="#packages">Packages</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Designs That Sell.</h1>
+<p>We help businesses stand out and attract customers.</p>
+<a href="#packages"><button class="btn">Get Started</button></a>
+</section>
+
+<section class="section" id="packages">
+<h2>Our Packages</h2>
+
+<div class="packages">
+
+<div class="package">
+<h3>Starter</h3>
+<p>Perfect for small businesses</p>
+<h2>UGX 40,000+</h2>
+<p> Poster / Flyer<br> Quick Delivery</p>
+<button onclick="order('Starter Package')">Order Now</button>
+</div>
+
+<div class="package popular">
+<div class="badge">Most Popular</div>
+<h3>Business</h3>
+<p>Best for growing brands</p>
+<h2>UGX 150,000</h2>
+<p> Logo Design<br> Branding Support<br> High Quality</p>
+<button onclick="order('Business Package')">Order Now</button>
+</div>
+
+<div class="package">
+<h3>Premium</h3>
+<p>For serious businesses</p>
+<h2>UGX 300,000+</h2>
+<p> Full Branding<br> Social Media Kit<br> Priority Service</p>
+<button onclick="order('Premium Package')">Order Now</button>
+</div>
+
+</div>
+</section>
+
+<section class="section testimonials">
+<h2>What Clients Say</h2>
+<div class="testimonial">“Very clean designs and fast delivery!”</div>
+<div class="testimonial">“Helped my business look professional.”</div>
+<div class="testimonial">“Highly recommend Wand Media.”</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact</h2>
+<p> +256 774 006 916</p>
+<p> thewandgraphics@gmail.com</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/256774006916"></a>
+
+<footer>
+<p>© 2026 Wand Media</p>
+</footer>
+
+<script>
+function order(service){
+    window.open(`https://wa.me/256774006916?text=Hello I want the ${service}`);
+}
+</script>
+
+</body>
+  </html>
