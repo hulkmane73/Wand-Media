@@ -3,213 +3,700 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wand Media</title>
+
+<title>Wand Media | Professional Branding, Photography & Videography</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:#d8e5da;
-    color:#1b5e3c;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-/* NAV */
-header {
-    display:flex;
-    justify-content:space-between;
-    padding:15px 30px;
-    background:white;
-    position:sticky;
-    top:0;
+body{
+font-family:'Poppins',sans-serif;
+background:#d8e5da;
+color:#1b5e3c;
 }
 
-.logo {height:50px;}
+/* HEADER */
 
-nav a {
-    margin:0 10px;
-    text-decoration:none;
-    color:#1b5e3c;
-    font-weight:600;
+header{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+height:70px;
+}
+
+nav a{
+text-decoration:none;
+margin:0 12px;
+font-weight:600;
+color:#1b5e3c;
+}
+
+nav a:hover{
+color:#af0b27;
 }
 
 /* HERO */
-.hero {
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#1b5e3c,#5eab70);
-    color:white;
-    text-align:center;
+
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(27,94,60,.85),rgba(94,171,112,.85));
+color:white;
 }
 
-.hero h1 {font-size:50px;}
-
-.btn {
-    background:#e3b04c;
-    padding:12px 25px;
-    border:none;
-    cursor:pointer;
-    margin-top:15px;
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
 }
 
-/* SECTION */
-.section {padding:70px 20px;text-align:center;}
+.hero p{
+max-width:700px;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#e3b04c;
+color:black;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+margin-top:20px;
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:25px;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.stat h2{
+font-size:40px;
+color:#af0b27;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+}
 
 /* PACKAGES */
-.packages {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-.package {
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    position:relative;
+.package{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.popular {
-    border:3px solid #af0b27;
+.popular{
+border:3px solid #af0b27;
 }
 
-.badge {
-    position:absolute;
-    top:-10px;
-    right:10px;
-    background:#af0b27;
-    color:white;
-    padding:5px 10px;
-    font-size:12px;
+.badge{
+display:inline-block;
+background:#af0b27;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+margin-bottom:10px;
 }
 
-.package button {
-    background:#e3b04c;
-    border:none;
-    padding:10px;
-    cursor:pointer;
-    margin-top:10px;
+.package button{
+padding:12px 20px;
+background:#e3b04c;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:15px;
 }
 
-/* TESTIMONIALS */
-.testimonials {
-    background:white;
-    padding:40px;
+/* REVIEWS */
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
 }
 
-.testimonial {
-    margin:15px 0;
+.review{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+/* FAQ */
+
+.faq-item{
+margin-bottom:15px;
+}
+
+.faq-btn{
+width:100%;
+padding:15px;
+background:#1b5e3c;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.faq-content{
+display:none;
+background:white;
+padding:15px;
 }
 
 /* CONTACT */
-.contact {
-    background:#1b5e3c;
-    color:white;
-    padding:60px 20px;
+
+.contact{
+background:#1b5e3c;
+color:white;
 }
 
-/* WHATSAPP */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    padding:15px;
-    border-radius:50%;
-    text-decoration:none;
-    color:white;
+.contact a{
+color:white;
+text-decoration:none;
+}
+
+/* SOCIALS */
+
+.socials{
+margin-top:20px;
+}
+
+.socials img{
+width:45px;
+margin:0 10px;
 }
 
 /* FOOTER */
-footer {
-    background:black;
-    color:white;
-    padding:20px;
-    text-align:center;
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
 }
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+font-size:28px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+header{
+flex-direction:column;
+}
+
+}
+
 </style>
 </head>
-
 <body>
 
-<header class="navbar">
-  <img src="2025-REBRAND-LOGO.png" class="logo" alt="Logo">
-</header>
+    <header>
+
+<img src="2025-REBRAND-LOGO.png" class="logo" alt="Wand Media Logo">
+
 <nav>
 <a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
 <a href="#packages">Packages</a>
+<a href="#reviews">Reviews</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero" id="home">
-<h1>Designs That Sell.</h1>
-<p>We help businesses stand out and attract customers.</p>
-<a href="#packages"><button class="btn">Get Started</button></a>
+
+<h1>Professional Branding, Photography & Videography</h1>
+
+<p>
+Helping businesses grow through creative design,
+powerful visuals and affordable premium services.
+</p>
+
+<a href="#packages" class="btn">
+Get Started
+</a>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>Why Choose Wand Media?</h2>
+
+<p>
+With over 7 years of experience, Wand Media has served
+more than 693 online clients and successfully completed
+over 1,000 projects.
+</p>
+
+<br>
+
+<p>
+We believe every business deserves professional branding,
+regardless of budget. Whether your budget is UGX 40,000
+or UGX 1,000,000+, we work with you to deliver premium
+results without compromising quality.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Our Achievements</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>7+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h2>693+</h2>
+<p>Clients Served</p>
+</div>
+
+<div class="stat">
+<h2>1000+</h2>
+<p>Projects Completed</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="portfolio">
+
+<h2>Our Portfolio</h2>
+
+<div class="gallery">
+
+<img src="portfolio1.jpg" alt="Portfolio">
+<img src="portfolio2.jpg" alt="Portfolio">
+<img src="portfolio3.jpg" alt="Portfolio">
+<img src="portfolio4.jpg" alt="Portfolio">
+<img src="portfolio5.jpg" alt="Portfolio">
+<img src="portfolio6.jpg" alt="Portfolio">
+
+</div>
+
 </section>
 
 <section class="section" id="packages">
+
 <h2>Our Packages</h2>
 
 <div class="packages">
 
 <div class="package">
-<h3>Starter</h3>
+
+<h3>Starter Package</h3>
+
 <p>Perfect for small businesses</p>
+
 <h2>UGX 40,000+</h2>
-<p>✔ Poster / Flyer<br>✔ Quick Delivery</p>
-<button onclick="order('Starter Package')">Order Now</button>
+
+<p>
+✔ Flyers<br>
+✔ Posters<br>
+✔ Social Media Graphics<br>
+✔ Fast Delivery
+</p>
+
+<button onclick="order('Starter Package')">
+Order Now
+</button>
+
 </div>
 
 <div class="package popular">
-<div class="badge">Most Popular</div>
-<h3>Business</h3>
+
+<div class="badge">
+MOST POPULAR
+</div>
+
+<h3>Business Package</h3>
+
 <p>Best for growing brands</p>
+
 <h2>UGX 150,000</h2>
-<p>✔ Logo Design<br>✔ Branding Support<br>✔ High Quality</p>
-<button onclick="order('Business Package')">Order Now</button>
+
+<p>
+✔ Logo Design<br>
+✔ Brand Identity<br>
+✔ Social Media Kit<br>
+✔ Premium Quality
+</p>
+
+<button onclick="order('Business Package')">
+Order Now
+</button>
+
 </div>
 
 <div class="package">
-<h3>Premium</h3>
-<p>For serious businesses</p>
+
+<h3>Premium Package</h3>
+
+<p>Complete business solution</p>
+
 <h2>UGX 300,000+</h2>
-<p>✔ Full Branding<br>✔ Social Media Kit<br>✔ Priority Service</p>
-<button onclick="order('Premium Package')">Order Now</button>
+
+<p>
+✔ Full Branding<br>
+✔ Photography<br>
+✔ Videography<br>
+✔ Priority Service
+</p>
+
+<button onclick="order('Premium Package')">
+Order Now
+</button>
+
 </div>
 
 </div>
+
 </section>
 
-<section class="section testimonials">
+<section class="section" id="reviews">
+
 <h2>What Clients Say</h2>
-<div class="testimonial">“Very clean designs and fast delivery!”</div>
-<div class="testimonial">“Helped my business look professional.”</div>
-<div class="testimonial">“Highly recommend Wand Media.”</div>
-</section>
+
+<div class="reviews">
+
+<div class="review">
+
+<h3>★★★★★</h3>
+
+<p>
+"Wand Media transformed our company image.
+Professional, affordable and fast."
+</p>
+
+<b>— Michael K.</b>
 
 </div>
-    
-<section class="contact" id="contact">
-<h2>Contact</h2>
-<p>📞 +256 774 006 914</p>
-<p>📧 thewandgraphics@gmail.com</p>
+
+<div class="review">
+
+<h3>★★★★★</h3>
+
+<p>
+"Excellent branding services and very good communication."
+</p>
+
+<b>— Sarah N.</b>
+
+</div>
+
+<div class="review">
+
+<h3>★★★★★</h3>
+
+<p>
+"They handled our photography and marketing perfectly."
+</p>
+
+<b>— Brian T.</b>
+
+</div>
+
+</div>
+
 </section>
-    
-<a class="whatsapp" href="https://wa.me/256774006914">💬</a>
+
+<section class="section" id="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<button class="faq-btn">
+Do you work with small budgets?
+</button>
+
+<div class="faq-content">
+Yes. We never refuse any budget and always recommend
+the best solution within your range.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-btn">
+Do you offer photography and videography?
+</button>
+
+<div class="faq-content">
+Yes. We offer professional photography and videography
+services for businesses and events.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-btn">
+How long does a project take?
+</button>
+
+<div class="faq-content">
+Most projects are delivered within 24 hours to 7 days
+depending on complexity.
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Ready To Grow Your Brand?</h2>
+
+<p>
+Professional branding, photography and videography
+that helps your business stand out.
+</p>
+
+<a href="https://wa.me/256774006914" class="btn">
+Request A Quote
+</a>
+
+    </section>
+
+<section class="contact section" id="contact">
+
+<h2>Contact Wand Media</h2>
+
+<p>
+📞
+<a href="tel:+256774006914">
++256 774 006 914
+</a>
+</p>
+
+<br>
+
+<p>
+📧
+<a href="mailto:thewandgraphics@gmail.com">
+thewandgraphics@gmail.com
+</a>
+</p>
+
+<br>
+
+<p>
+📍 Ovino Shopping Mall, Kampala, Uganda
+</p>
+
+<br>
+
+<a
+href="https://maps.app.goo.gl/JretsdBN7VTLsAUy9"
+target="_blank"
+class="btn">
+
+Get Directions
+
+</a>
+
+<div class="socials">
+
+<a
+href="https://www.instagram.com/thewandgraphics?igsh=MTVuNWtwamcwY3Zuaw=="
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+alt="Instagram">
+
+</a>
+
+<a
+href="https://wa.me/256774006914"
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+alt="WhatsApp">
+
+</a>
+
+</div>
+
+<br>
+
+<p>
+
+<strong>Premium Quality. Fair Pricing.</strong>
+
+</p>
+
+<p>
+
+At Wand Media, we believe every business deserves
+professional branding regardless of budget.
+
+Whether your budget is UGX 40,000 or UGX 1,000,000+,
+we work with you to deliver high-end results without
+compromising quality.
+
+</p>
+
+</section>
+
+<a
+class="whatsapp"
+href="https://wa.me/256774006914?text=Hello%20Wand%20Media"
+target="_blank">
+
+💬
+
+</a>
 
 <footer>
-<p>© 2026 Wand Media</p>
+
+<h3>Wand Media</h3>
+
+<p>
+Professional Branding, Photography & Videography
+</p>
+
+<br>
+
+<p>
+© 2026 Wand Media. All Rights Reserved.
+</p>
+
 </footer>
 
 <script>
-function order(service){
-    window.open(`https://wa.me/256774006914?text=Hello I want the ${service}`);
+
+/* FAQ */
+
+const faqButtons =
+document.querySelectorAll(".faq-btn");
+
+faqButtons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const content =
+button.nextElementSibling;
+
+if(content.style.display === "block"){
+
+content.style.display = "none";
+
+}else{
+
+content.style.display = "block";
+
 }
+
+});
+
+});
+
+/* ORDER BUTTONS */
+
+function order(service){
+
+window.open(
+
+`https://wa.me/256774006914?text=Hello%20Wand%20Media,%20I%20would%20like%20to%20order%20the%20${service}`,
+
+"_blank"
+
+);
+
+}
+
 </script>
 
 </body>
